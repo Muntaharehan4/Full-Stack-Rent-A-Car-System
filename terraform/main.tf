@@ -65,12 +65,12 @@ resource "azurerm_service_plan" "asptest" {
   name                = var.aspname
   resource_group_name = azurerm_resource_group.rgtest.name
   location            = azurerm_resource_group.rgtest.location
-  os_type             = "Windows"
+  os_type             = "Linux"
   sku_name            = "B1"
 }
 
 # Create the web apps, pass in the App Service Plan ID 
- resource "azurerm_windows_web_app" "webapptest" {
+ resource "azurerm_linux_web_app" "webapptest" {
   name                = "${var.webapp01}-webapp"
   resource_group_name = azurerm_resource_group.rgtest.name
   location            = azurerm_resource_group.rgtest.location
@@ -90,7 +90,7 @@ resource "azurerm_app_service_virtual_network_swift_connection" "conection1" {
   subnet_id      = azurerm_subnet.subnettest.id
 }
 
- resource "azurerm_windows_web_app" "webapptest2" {
+ resource "azurerm_linux_web_app" "webapptest2" {
   name                = "${var.webapp02}-webapp"
   resource_group_name = azurerm_resource_group.rgtest.name
   location            = azurerm_resource_group.rgtest.location
