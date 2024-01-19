@@ -36,21 +36,28 @@ resource "azurerm_mssql_database" "db" {
   server_id = azurerm_mssql_server.server.id
 }
 
-# Create the VNET
+# Create the VNET and subnet
 resource "azurerm_virtual_network" "vnettest" {
   name                = var.vn_name
   resource_group_name = azurerm_resource_group.rgtest.name
   location            = azurerm_resource_group.rgtest.location
   address_space       = ["10.0.0.0/16"]
+}
 
-  subnet {
-    name           = "app-subnet"
-    address_prefix = "10.0.1.0/24"
+resource "azurerm_subnet" "subnettest" {
+  name                 = var.subnet_name
+  resource_group_name = azurerm_resource_group.rgtest.name
+  location            = azurerm_resource_group.rgtest.location
+  address_prefixes     = ["10.0.1.0/24"]
+  delegation {
+    name = "delegation"
+    service_delegation {
+      name = "Microsoft.Web/serverFarms"
+    }
   }
 }
 
 # Create the Windows App Service Plan
-
 resource "azurerm_service_plan" "asptest" {
 
   name                = var.aspname
@@ -60,8 +67,7 @@ resource "azurerm_service_plan" "asptest" {
   sku_name            = "B1"
 }
 
-# Create the web apps, pass in the App Service Plan ID and attached VNET
-
+# Create the web apps, pass in the App Service Plan ID 
  resource "azurerm_windows_web_app" "webapptest" {
   name                = "${var.webapp01}-webapp"
   resource_group_name = azurerm_resource_group.rgtest.name
@@ -74,10 +80,12 @@ resource "azurerm_service_plan" "asptest" {
     always_on          = "true"
     http2_enabled      = "true"
   }
-   app_settings = {
-    WEBSITE_VNET_ROUTE_ALL = "1"
-    VNET_NAME              = azurerm_virtual_network.vnettest.name
-  }
+}
+
+#attach subnet with app service 1
+resource "azurerm_app_service1_virtual_network_swift_connection" "conection1" {
+  app_service_id = azurerm_windows_web_app.webapptest.id
+  subnet_id      = azurerm_subnet.subnettest.id
 }
 
  resource "azurerm_windows_web_app" "webapptest2" {
@@ -92,11 +100,15 @@ resource "azurerm_service_plan" "asptest" {
     always_on          = "true"
     http2_enabled      = "true"
   }
-   app_settings = {
-    WEBSITE_VNET_ROUTE_ALL = "1"
-    VNET_NAME              = azurerm_virtual_network.vnettest.name
-  }
 }
+
+#attach subnet with app service 2
+resource "azurerm_app_service2_virtual_network_swift_connection" "conection2" {
+  app_service_id = azurerm_windows_web_app.webapptest2.id
+  subnet_id      = azurerm_subnet.subnettest.id
+}
+
+
 # Create the keyvault and add access poilicies
 data "azurerm_client_config" "current" {}
 resource "azurerm_key_vault" "keyvault01" {
