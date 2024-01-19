@@ -13,7 +13,7 @@ variable "rgname" {
 variable "sqlname" {
   type        = string
   description = "The name of the SQL SERVER."
-  default     = "AssignmentSERVER"
+  default     = "assignmentserver"
 }
 variable "sql_db_name" {
   type        = string
@@ -60,5 +60,11 @@ variable "kvname" {
 variable "vn_name" {
   type        = string
   description = "The name of KeyVault."
-  default     = "assignment_VNET"
+  default     = "assignmentvnet"
+}
+
+variable "subnet_name" {
+  type        = string
+  description = "The name of Subnet."
+  default     = "assignmentsubnet"
 }
