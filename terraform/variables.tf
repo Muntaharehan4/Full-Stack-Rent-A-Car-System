@@ -54,7 +54,7 @@ variable "webapp02" {
 variable "kvname" {
   type        = string
   description = "The name of KeyVault."
-  default     = "assignment_kv"
+  default     = "assignmentkv"
 }
 
 variable "vn_name" {
