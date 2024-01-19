@@ -79,7 +79,6 @@ resource "azurerm_service_plan" "asptest" {
   site_config {
     minimum_tls_version = "1.2"
     ftps_state         = "FtpsOnly"
-    always_on          = "true"
     http2_enabled      = "true"
   }
 }
@@ -99,7 +98,6 @@ resource "azurerm_app_service_virtual_network_swift_connection" "conection1" {
   site_config {
     minimum_tls_version = "1.2"
     ftps_state         = "FtpsOnly"
-    always_on          = "true"
     http2_enabled      = "true"
   }
 }
