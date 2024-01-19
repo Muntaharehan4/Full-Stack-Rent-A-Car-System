@@ -7,18 +7,18 @@ variable "location" {
 variable "rgname" {
   type        = string
   description = "The resource group name"
-  default     = "muntahapoc_rg"
+  default     = "muntahapoc1_rg"
 }
 
 variable "sqlname" {
   type        = string
   description = "The name of the SQL SERVER."
-  default     = "muntahapocserver"
+  default     = "muntahapoc1server"
 }
 variable "sql_db_name" {
   type        = string
   description = "The name of the SQL Database."
-  default     = "muntahapoc_db"
+  default     = "muntahapoc1_db"
 }
 
 variable "username" {
@@ -36,40 +36,40 @@ variable "password" {
 variable "aspname" {
   type        = string
   description = "The name of App Service Plan."
-  default     = "muntahapoc_asp"
+  default     = "muntahapoc1_asp"
 }
 
 variable "webapp01" {
   type        = string
   description = "The name of Frontend App service."
-  default     = "muntahapoc-frontend"
+  default     = "muntahapoc1-frontend"
 }
 
 variable "webapp02" {
   type        = string
   description = "The name of Backend App service."
-  default     = "muntahapoc-backend"
+  default     = "muntahapoc1-backend"
 }
 
 variable "kvname" {
   type        = string
   description = "The name of KeyVault."
-  default     = "muntahapockv"
+  default     = "muntahapoc1kv"
 }
 
 variable "vn_name" {
   type        = string
   description = "The name of KeyVault."
-  default     = "muntahapocvnet"
+  default     = "muntahapoc1vnet"
 }
 
 variable "subnet_name" {
   type        = string
   description = "The name of Subnet."
-  default     = "muntahapocsubnet"
+  default     = "muntahapoc1subnet"
 }
 variable "acrname" {
   type        = string
   description = "The name of ACR."
-  default     = "muntahapocacr"
+  default     = "muntahapoc1acr"
 }
