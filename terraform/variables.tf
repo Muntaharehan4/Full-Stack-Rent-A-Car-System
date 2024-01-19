@@ -68,3 +68,8 @@ variable "subnet_name" {
   description = "The name of Subnet."
   default     = "assignmentsubnet"
 }
+variable "acrname" {
+  type        = string
+  description = "The name of ACR."
+  default     = "acrassignment"
+}
