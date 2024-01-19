@@ -7,18 +7,18 @@ variable "location" {
 variable "rgname" {
   type        = string
   description = "The resource group name"
-  default     = "muntaha_rg"
+  default     = "muntahatest_rg"
 }
 
 variable "sqlname" {
   type        = string
   description = "The name of the SQL SERVER."
-  default     = "muntahaserver"
+  default     = "muntahatestserver"
 }
 variable "sql_db_name" {
   type        = string
   description = "The name of the SQL Database."
-  default     = "muntaha_db"
+  default     = "muntahatest_db"
 }
 
 variable "username" {
@@ -36,7 +36,7 @@ variable "password" {
 variable "aspname" {
   type        = string
   description = "The name of App Service Plan."
-  default     = "muntaha_asp"
+  default     = "muntahatest_asp"
 }
 
 variable "webapp01" {
@@ -54,22 +54,22 @@ variable "webapp02" {
 variable "kvname" {
   type        = string
   description = "The name of KeyVault."
-  default     = "muntahakv"
+  default     = "muntahatestkv"
 }
 
 variable "vn_name" {
   type        = string
   description = "The name of KeyVault."
-  default     = "muntahavnet"
+  default     = "muntahatestvnet"
 }
 
 variable "subnet_name" {
   type        = string
   description = "The name of Subnet."
-  default     = "muntahasubnet"
+  default     = "muntahatestsubnet"
 }
 variable "acrname" {
   type        = string
   description = "The name of ACR."
-  default     = "muntahaacr"
+  default     = "muntahatestacr"
 }
