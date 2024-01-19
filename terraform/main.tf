@@ -86,7 +86,7 @@ resource "azurerm_service_plan" "asptest" {
 
 #attach subnet with app service 1
 resource "azurerm_app_service_virtual_network_swift_connection" "conection1" {
-  app_service_id = azurerm_windows_web_app.webapptest.id
+  app_service_id = azurerm_linux_web_app.webapptest.id
   subnet_id      = azurerm_subnet.subnettest.id
 }
 
@@ -106,7 +106,7 @@ resource "azurerm_app_service_virtual_network_swift_connection" "conection1" {
 
 #attach subnet with app service 2
 resource "azurerm_app_service_virtual_network_swift_connection" "conection2" {
-  app_service_id = azurerm_windows_web_app.webapptest2.id
+  app_service_id = azurerm_linux_web_app.webapptest2.id
   subnet_id      = azurerm_subnet.subnettest.id
 }
 
