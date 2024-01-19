@@ -47,12 +47,14 @@ resource "azurerm_virtual_network" "vnettest" {
 resource "azurerm_subnet" "subnettest" {
   name                 = var.subnet_name
   resource_group_name = azurerm_resource_group.rgtest.name
-  location            = azurerm_resource_group.rgtest.location
+  virtual_network_name = azurerm_virtual_network.vnettest.name
   address_prefixes     = ["10.0.1.0/24"]
+
   delegation {
     name = "delegation"
+
     service_delegation {
-      name = "Microsoft.Web/serverFarms"
+        name = "Microsoft.Web/serverFarms"
     }
   }
 }
@@ -83,7 +85,7 @@ resource "azurerm_service_plan" "asptest" {
 }
 
 #attach subnet with app service 1
-resource "azurerm_app_service1_virtual_network_swift_connection" "conection1" {
+resource "azurerm_app_service_virtual_network_swift_connection" "conection1" {
   app_service_id = azurerm_windows_web_app.webapptest.id
   subnet_id      = azurerm_subnet.subnettest.id
 }
@@ -103,7 +105,7 @@ resource "azurerm_app_service1_virtual_network_swift_connection" "conection1" {
 }
 
 #attach subnet with app service 2
-resource "azurerm_app_service2_virtual_network_swift_connection" "conection2" {
+resource "azurerm_app_service_virtual_network_swift_connection" "conection2" {
   app_service_id = azurerm_windows_web_app.webapptest2.id
   subnet_id      = azurerm_subnet.subnettest.id
 }
