@@ -149,5 +149,11 @@ resource "azurerm_key_vault_secret" "secret02" {
   value        = "EncryptionKey"
   key_vault_id = azurerm_key_vault.keyvault01.id
 }
+resource "azurerm_container_registry" "acr" {
+  name                = var.acrname
+  resource_group_name = azurerm_resource_group.rgtest.name
+  location            = azurerm_resource_group.rgtest.location
+  sku                 = "Basic"
+}
 
 
