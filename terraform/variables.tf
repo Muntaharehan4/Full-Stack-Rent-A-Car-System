@@ -10,6 +10,11 @@ variable "rgname" {
   default     = "assignment_rg"
 }
 
+variable "sqlname" {
+  type        = string
+  description = "The name of the SQL SERVER."
+  default     = "AssignmentSERVER"
+}
 variable "sql_db_name" {
   type        = string
   description = "The name of the SQL Database."
