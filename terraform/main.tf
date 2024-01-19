@@ -59,14 +59,14 @@ resource "azurerm_subnet" "subnettest" {
   }
 }
 
-# Create the Windows App Service Plan
+# Create the Linux App Service Plan
 resource "azurerm_service_plan" "asptest" {
 
   name                = var.aspname
   resource_group_name = azurerm_resource_group.rgtest.name
   location            = azurerm_resource_group.rgtest.location
   os_type             = "Linux"
-  sku_name            = "B1"
+  sku_name            = "P1v2"
 }
 
 # Create the web apps, pass in the App Service Plan ID 
