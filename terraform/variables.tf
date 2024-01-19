@@ -7,18 +7,18 @@ variable "location" {
 variable "rgname" {
   type        = string
   description = "The resource group name"
-  default     = "assignment_rg"
+  default     = "test53_rg"
 }
 
 variable "sqlname" {
   type        = string
   description = "The name of the SQL SERVER."
-  default     = "assignmentserver"
+  default     = "test53server"
 }
 variable "sql_db_name" {
   type        = string
   description = "The name of the SQL Database."
-  default     = "assignment_db"
+  default     = "test53_db"
 }
 
 variable "username" {
@@ -36,7 +36,7 @@ variable "password" {
 variable "aspname" {
   type        = string
   description = "The name of App Service Plan."
-  default     = "assignment_asp"
+  default     = "test53_asp"
 }
 
 variable "webapp01" {
@@ -54,22 +54,22 @@ variable "webapp02" {
 variable "kvname" {
   type        = string
   description = "The name of KeyVault."
-  default     = "assignmentkv"
+  default     = "test53kv"
 }
 
 variable "vn_name" {
   type        = string
   description = "The name of KeyVault."
-  default     = "assignmentvnet"
+  default     = "test53vnet"
 }
 
 variable "subnet_name" {
   type        = string
   description = "The name of Subnet."
-  default     = "assignmentsubnet"
+  default     = "test53subnet"
 }
 variable "acrname" {
   type        = string
   description = "The name of ACR."
-  default     = "acrassignment"
+  default     = "test53acr"
 }
