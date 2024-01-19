@@ -80,7 +80,7 @@ resource "azurerm_service_plan" "asptest" {
   }
 }
 
- resource "azurerm_windows_web_app" "webapptest" {
+ resource "azurerm_windows_web_app" "webapptest2" {
   name                = "${var.webapp02}-webapp"
   resource_group_name = azurerm_resource_group.rgtest.name
   location            = azurerm_resource_group.rgtest.location
