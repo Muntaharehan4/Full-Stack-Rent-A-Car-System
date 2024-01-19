@@ -27,6 +27,7 @@ jobs:
           docker login -u ${{ env.ACR_USERNAME }} -p ${{ env.ACR_PASSWORD }} assignmentacr1.azurecr.io
 
       - name: Build and push container image to Azure Container Registry
+        working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
         run: |
           docker build -t ${{ env.ACR_NAME }}.azurecr.io/backend:${{ github.sha }} -f ./Dockerfile .
           docker push ${{ env.ACR_NAME }}.azurecr.io/backend:${{ github.sha }}
