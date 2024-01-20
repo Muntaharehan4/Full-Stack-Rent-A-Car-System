@@ -1,4 +1,4 @@
-name: sql script workflow
+name: sql-script workflow
 on: [push]
 
 jobs:
