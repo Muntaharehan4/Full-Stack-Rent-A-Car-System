@@ -7,18 +7,18 @@ variable "location" {
 variable "rgname" {
   type        = string
   description = "The resource group name"
-  default     = "tftest_rg"
+  default     = "muntaha-test_rg"
 }
 
 variable "sqlname" {
   type        = string
   description = "The name of the SQL SERVER."
-  default     = "tftestserver"
+  default     = "muntaha-testserver"
 }
 variable "sql_db_name" {
   type        = string
   description = "The name of the SQL Database."
-  default     = "tftest_db"
+  default     = "muntaha-test_db"
 }
 
 variable "username" {
@@ -36,40 +36,40 @@ variable "password" {
 variable "aspname" {
   type        = string
   description = "The name of App Service Plan."
-  default     = "tftest_asp"
+  default     = "muntaha-test_asp"
 }
 
 variable "webapp01" {
   type        = string
   description = "The name of Frontend App service."
-  default     = "tftest-frontend"
+  default     = "muntaha-test-frontend"
 }
 
 variable "webapp02" {
   type        = string
   description = "The name of Backend App service."
-  default     = "tftest-backend"
+  default     = "muntaha-test-backend"
 }
 
 variable "kvname" {
   type        = string
   description = "The name of KeyVault."
-  default     = "tftestkv"
+  default     = "muntaha-testkv"
 }
 
 variable "vn_name" {
   type        = string
   description = "The name of KeyVault."
-  default     = "tftestvnet"
+  default     = "muntaha-testvnet"
 }
 
 variable "subnet_name" {
   type        = string
   description = "The name of Subnet."
-  default     = "tftestsubnet"
+  default     = "muntaha-testsubnet"
 }
 variable "acrname" {
   type        = string
   description = "The name of ACR."
-  default     = "tftestacr"
+  default     = "muntaha-testacr"
 }
