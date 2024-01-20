@@ -1,3 +1,4 @@
+name: sql script
 on: [push]
 
 jobs:
