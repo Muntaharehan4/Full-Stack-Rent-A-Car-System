@@ -1,24 +1,24 @@
 variable "location" {
   type        = string
   description = "Location for all resources."
-  default     = "westus"
+  default     = "eastus"
 }
 
 variable "rgname" {
   type        = string
   description = "The resource group name"
-  default     = "muntahastest_rg"
+  default     = "TFtest_rg"
 }
 
 variable "sqlname" {
   type        = string
   description = "The name of the SQL SERVER."
-  default     = "muntahastestserver"
+  default     = "TFtestserver"
 }
 variable "sql_db_name" {
   type        = string
   description = "The name of the SQL Database."
-  default     = "muntahastest_db"
+  default     = "TFtest_db"
 }
 
 variable "username" {
@@ -36,40 +36,40 @@ variable "password" {
 variable "aspname" {
   type        = string
   description = "The name of App Service Plan."
-  default     = "muntahastest_asp"
+  default     = "TFtest_asp"
 }
 
 variable "webapp01" {
   type        = string
   description = "The name of Frontend App service."
-  default     = "muntahastest-frontend"
+  default     = "TFtest-frontend"
 }
 
 variable "webapp02" {
   type        = string
   description = "The name of Backend App service."
-  default     = "muntahastest-backend"
+  default     = "TFtest-backend"
 }
 
 variable "kvname" {
   type        = string
   description = "The name of KeyVault."
-  default     = "muntahastestkv"
+  default     = "TFtestkv"
 }
 
 variable "vn_name" {
   type        = string
   description = "The name of KeyVault."
-  default     = "muntahastestvnet"
+  default     = "TFtestvnet"
 }
 
 variable "subnet_name" {
   type        = string
   description = "The name of Subnet."
-  default     = "muntahastestsubnet"
+  default     = "TFtestsubnet"
 }
 variable "acrname" {
   type        = string
   description = "The name of ACR."
-  default     = "muntahastestacr"
+  default     = "TFtestacr"
 }
