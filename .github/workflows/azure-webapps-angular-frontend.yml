@@ -8,7 +8,6 @@ env:
 
 on:
   push:
-    paths: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
     branches:
       - main
 
