@@ -4,7 +4,7 @@ env:
   AZURE_WEBAPP_PACKAGE_PATH: 'Front-End/recap-project'
   ACR_NAME: munthaacr
   ACR_USERNAME: munthaacr
-  ACR_PASSWORD: secrets.AZURE_ACR_PASSWORD
+  ACR_PASSWORD: xCCffpjQS/f3s6usOKyGSif09HdA74JmhnrRyOXJm8+ACRAF5tzQ
 
 on:
   push:
