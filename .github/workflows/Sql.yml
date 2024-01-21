@@ -1,5 +1,9 @@
 name: sql-script workflow
-on: [push]
+on:
+  push:
+    paths: Back-End
+    branches:
+      - main
 
 permissions:
       id-token: write
