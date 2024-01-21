@@ -1,4 +1,4 @@
-# Create the resource group
+#Create the resource group
 resource "azurerm_resource_group" "rgtest" {
   name = var.rgname
   location = var.location
