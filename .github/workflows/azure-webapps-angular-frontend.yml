@@ -2,9 +2,9 @@
 env:
   AZURE_WEBAPP_NAME: assignment-webapp
   AZURE_WEBAPP_PACKAGE_PATH: 'Front-End/recap-project'
-  ACR_NAME: assignmentacr1
-  ACR_USERNAME: assignmentacr1
-  ACR_PASSWORD: 8K4IpVo2ub339zv6olPNuX5VCE6EKeO9+8uBHT2/M++ACRCCTiUF
+  ACR_NAME: munthaacr
+  ACR_USERNAME: munthaacr
+  ACR_PASSWORD: secrets.AZURE_ACR_PASSWORD
 
 on:
   push:
