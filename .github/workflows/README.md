@@ -59,6 +59,12 @@ Triggered on push to the `main` branch.
 - **Steps**:
   1. Deploy to Azure Web App using the specified publish profile and container image.
 
+#### Docker Build (Added)
+
+- **Runs on**: ubuntu-latest
+- **Steps**:
+  1. Build the Docker image for the Angular Frontend using the provided Dockerfile.
+
 ## 3. azure-webapps-dotnet-core.yml
 
 This workflow automates the build and deployment of the .NET Core Back-End to Azure Web App.
@@ -96,6 +102,12 @@ Triggered on push to the `main` branch with changes in the specified path.
 - **Environment**: Development
 - **Steps**:
   1. Deploy to Azure Web App using the specified publish profile and container image.
+
+#### Docker Build (Added)
+
+- **Runs on**: ubuntu-latest
+- **Steps**:
+  1. Build the Docker image for the .NET Core Back-End using the provided Dockerfile.
 
 ## 4. terraform.yml
 
