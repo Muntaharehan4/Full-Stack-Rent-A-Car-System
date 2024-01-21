@@ -18,5 +18,4 @@ jobs:
         connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
         path: 'Back-End/CreateTableScript.sql'
         action: 'publish'
-        build-arguments: '-c Release'                 # Optional build options passed to dotnet build
-        arguments: '/p:DropObjectsNotInSource=true'   # Optional properties and parameters for SqlPackage Publish
+        build-arguments: '-c Release'                 #
