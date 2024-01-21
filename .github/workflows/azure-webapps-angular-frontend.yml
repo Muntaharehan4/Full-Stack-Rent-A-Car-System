@@ -24,7 +24,7 @@ jobs:
         
       - name: Log in to Azure Container Registry
         run: |
-          docker login -u ${{ env.ACR_USERNAME }} -p ${{ env.ACR_PASSWORD }}  ${{ env.ACR_NAME }}.azurecr.io
+          docker login -u ${{ env.ACR_USERNAME }} -p ${{ env.ACR_PASSWORD }} ${{ env.ACR_NAME }}.azurecr.io
 
       - name: Build and push container image to Azure Container Registry
         working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
