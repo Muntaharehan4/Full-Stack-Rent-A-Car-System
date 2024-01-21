@@ -5,6 +5,7 @@ permissions:
   contents: read
 on:
   push:
+    paths: terraform
     branches:
       - main
 jobs:
